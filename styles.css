@@ -15,6 +15,7 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+html.is-construction { scroll-padding-top: 115px; }
 body {
   margin: 0;
   font-family: var(--sans);
@@ -84,7 +85,7 @@ em { color: var(--gold); font-style: italic; }
 @media (max-width: 900px) {
   .nav__toggle { display: block; }
   .nav__links {
-    position: fixed; top: 76px; left: 0; right: 0;
+    position: absolute; top: 100%; left: 0; right: 0;
     flex-direction: column; align-items: stretch; gap: 0;
     background: var(--night-2); border-bottom: 1px solid var(--line);
     padding: .5rem 16px 1.5rem;
@@ -138,7 +139,7 @@ em { color: var(--gold); font-style: italic; }
   max-width: 760px; border-top: 1px solid var(--line); padding-top: 2rem;
 }
 .hero__facts strong { display: block; font-family: var(--serif); font-size: 1.7rem; color: var(--gold); }
-.hero__facts span { font-size: .82rem; color: var(--muted); }
+.hero__facts li > span { font-size: .82rem; color: var(--muted); }
 @media (max-width: 600px) {
   .hero__facts { grid-template-columns: 1fr; gap: 1.2rem; }
   .hero__cta .btn { width: 100%; }
@@ -329,3 +330,22 @@ em { color: var(--gold); font-style: italic; }
   .reveal { opacity: 1; transform: none; transition: none; }
   .hero__stars { animation: none; }
 }
+
+/* ---------- Site en construction ---------- */
+.construction {
+  background: var(--gold); color: #1a1430;
+  font-size: .8rem; font-weight: 600; text-align: center;
+  padding: .45rem 16px; line-height: 1.35;
+}
+.is-construction .legal { padding-top: 175px; }
+.about__badge {
+  position: absolute; top: 46%; left: 50%; transform: translate(-50%, -50%); z-index: 1;
+  background: rgba(13, 11, 30, .85); border: 1px solid var(--gold); color: var(--gold);
+  font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; font-weight: 600;
+  padding: .45rem .9rem; border-radius: 999px; white-space: nowrap;
+}
+.about__frame.has-photo { padding: 0; overflow: hidden; }
+.about__photo { width: 100%; height: 100%; object-fit: cover; }
+.quote--empty { border-style: dashed; background: transparent; }
+.quote--empty::before { opacity: .12; }
+.quote--empty blockquote { color: var(--muted); }
