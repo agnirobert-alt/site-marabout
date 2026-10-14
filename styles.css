@@ -14,12 +14,12 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+html { font-size: 112.5%; scroll-behavior: smooth; scroll-padding-top: 80px; }
 html.is-construction { scroll-padding-top: 115px; }
 body {
   margin: 0;
   font-family: var(--sans);
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.65;
   color: var(--text);
   background: var(--night);
