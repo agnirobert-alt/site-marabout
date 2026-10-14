@@ -10,8 +10,8 @@ window.SITE = {
   // 1. Le cabinet et le médium
   cabinet: "La Pleine Lune",
   nomComplet: "Cabinet de naturopathie et d'élévation spirituelle « La Pleine Lune »",
-  nom: "Adam Mata",
-  slogan: "Médium voyant · Adam Mata",
+  nom: "Adam Souabirou",
+  slogan: "Médium voyant · Adam Souabirou",
   photo: "", // ex. "photo-maitre.jpg" (fichier placé dans le dossier du site)
 
   // 2. Contact
