@@ -19,6 +19,23 @@ document.querySelectorAll("[data-site-mail]").forEach((a) => {
 document.querySelectorAll("[data-whatsapp]").forEach((a) => {
   a.href = waLink(`Bonjour ${SITE.nom}, je souhaite prendre rendez-vous pour une consultation.`);
 });
+// Horaires : tableau jour par jour, aujourd'hui mis en évidence
+const hours = document.getElementById("hours");
+if (hours && Array.isArray(SITE.horaires)) {
+  const today = new Date().toLocaleDateString("fr-FR", { weekday: "long" });
+  hours.tBodies[0].replaceChildren(
+    ...SITE.horaires.map(([jour, h]) => {
+      const tr = document.createElement("tr");
+      if (jour.toLowerCase() === today) tr.className = "is-today";
+      const th = document.createElement("th");
+      th.textContent = jour;
+      const td = document.createElement("td");
+      td.textContent = h;
+      tr.append(th, td);
+      return tr;
+    })
+  );
+}
 const year = document.getElementById("year");
 if (year) year.textContent = new Date().getFullYear();
 

@@ -403,3 +403,10 @@ em { color: var(--gold); font-style: italic; }
   .tabs { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; margin-inline: -16px; padding: 0 16px 6px; scrollbar-width: none; }
   .tabs::-webkit-scrollbar { display: none; }
 }
+
+/* ---------- Horaires ---------- */
+.hours { border-collapse: collapse; margin-top: .3rem; width: 100%; max-width: 320px; }
+.hours th, .hours td { padding: .28rem 0; font-size: .98rem; text-align: left; }
+.hours th { font-weight: 500; color: var(--cream); }
+.hours td { color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
+.hours tr.is-today th, .hours tr.is-today td { color: var(--gold); font-weight: 600; }

@@ -15,26 +15,35 @@ window.SITE = {
   photo: "", // ex. "photo-maitre.jpg" (fichier placé dans le dossier du site)
 
   // 2. Contact
-  telephone: "+33 6 00 00 00 00",
-  whatsapp: "33600000000", // format international, sans + ni espaces
+  telephone: "+225 07 97 26 12 42", // appels directs
+  whatsapp: "2250501568600", // format international, sans + ni espaces
+  whatsappAffiche: "+225 05 01 56 86 00",
   email: "contact@exemple.fr",
 
   // 3. Cabinet
-  ville: "Paris",
-  adresseCabinet: "Sur rendez-vous — adresse communiquée à la réservation",
-  horaires: "Lundi – Samedi · 9 h – 20 h",
-  langues: "FR · EN · Bambara",
-  annees: "25",
+  ville: "Bouaké",
+  pays: "Côte d'Ivoire",
+  adresseCabinet: "Siège : Bouaké, Côte d'Ivoire · Annexe : Bénin",
+  horaires: [
+    ["Lundi", "8 h – 19 h"],
+    ["Mardi", "8 h – 17 h"],
+    ["Mercredi", "8 h – 17 h"],
+    ["Jeudi", "8 h – 18 h"],
+    ["Vendredi", "15 h – 20 h"],
+    ["Samedi", "8 h – 18 h"],
+    ["Dimanche", "8 h – 18 h"],
+  ],
+  langues: "Français",
+  annees: "7",
   delaiReponse: "24 h",
 
   // 4. Mentions légales
   legal: {
-    editeur: "[Nom et prénom ou société — à compléter]",
+    editeur: "Adam Souabirou — Cabinet « La Pleine Lune »",
     statut: "[Statut juridique — à compléter]",
-    siret: "[SIRET — à compléter]",
-    adresse: "[Adresse — à compléter]",
-    directeur: "[Directeur de la publication — à compléter]",
-    mediateur: "[Médiateur de la consommation — à compléter]",
+    rccm: "[N° RCCM — à compléter]",
+    adresse: "Siège social : Bouaké, Côte d'Ivoire — Annexe : Bénin",
+    directeur: "Adam Souabirou",
     conservation: "3 ans",
   },
   hebergeur: "GitHub, Inc. — 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis — github.com",
