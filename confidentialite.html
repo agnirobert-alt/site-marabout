@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Confidentialité — Maître Sidi Kanté</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0d0b1e">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav is-scrolled">
+    <div class="container nav__inner">
+      <a href="index.html" class="brand" aria-label="Accueil">
+        <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M20 6 L23 17 L34 20 L23 23 L20 34 L17 23 L6 20 L17 17 Z" fill="currentColor"/>
+        </svg>
+        <span class="brand__text">Maître Sidi Kanté<small>Sagesse ancestrale</small></span>
+      </a>
+      <a href="index.html" class="btn btn--ghost btn--sm">← Retour au site</a>
+    </div>
+  </header>
+
+  <!-- Complétez les champs entre crochets avant la mise en ligne. -->
+  <main class="legal container">
+    <p class="eyebrow">Vos données</p>
+    <h1>Politique de confidentialité</h1>
+
+    <p>
+      La discrétion est au cœur de notre pratique. Cette page explique quelles données sont
+      recueillies, pourquoi, et quels sont vos droits.
+    </p>
+
+    <h2>Responsable du traitement</h2>
+    <p>[Nom de l'éditeur] — [adresse] — [e-mail de contact].</p>
+
+    <h2>Données collectées</h2>
+    <p>
+      Ce site n'enregistre aucune donnée sur un serveur. Le formulaire de contact prépare
+      simplement un message qui s'ouvre dans WhatsApp : rien n'est transmis tant que vous
+      ne l'envoyez pas vous-même. Les informations alors partagées (prénom, téléphone,
+      description de votre situation) servent uniquement à répondre à votre demande et à
+      organiser votre rendez-vous.
+    </p>
+
+    <h2>Durée de conservation</h2>
+    <p>
+      Vos échanges sont conservés le temps de l'accompagnement, puis au maximum
+      [durée, ex. 3 ans] après le dernier contact, sauf demande de suppression de votre part.
+    </p>
+
+    <h2>Partage des données</h2>
+    <p>
+      Vos informations ne sont jamais vendues, louées ni communiquées à des tiers.
+      Les messages transitent par WhatsApp (Meta), soumis à sa propre politique de
+      confidentialité.
+    </p>
+
+    <h2>Cookies</h2>
+    <p>
+      Ce site n'utilise aucun cookie de suivi ni de publicité. Seules les polices de
+      caractères sont chargées depuis Google Fonts.
+    </p>
+
+    <h2>Vos droits</h2>
+    <p>
+      Conformément au RGPD, vous disposez d'un droit d'accès, de rectification,
+      d'effacement et d'opposition sur vos données. Pour l'exercer, écrivez à
+      [e-mail de contact]. Vous pouvez également adresser une réclamation à la CNIL
+      (cnil.fr).
+    </p>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__bottom">
+      <span>© <span id="year"></span> Maître Sidi Kanté. Tous droits réservés.</span>
+      <span><a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a></span>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
