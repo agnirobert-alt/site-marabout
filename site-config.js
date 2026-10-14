@@ -16,8 +16,8 @@ window.SITE = {
 
   // 2. Contact
   telephone: "+225 07 97 26 12 42", // appels directs
-  whatsapp: "2250501568600", // format international, sans + ni espaces
-  whatsappAffiche: "+225 05 01 56 86 00",
+  whatsapp: "2250797261242", // format international, sans + ni espaces
+  whatsappAffiche: "+225 07 97 26 12 42",
   email: "contact@exemple.fr",
 
   // 3. Cabinet
@@ -34,7 +34,7 @@ window.SITE = {
     ["Dimanche", "8 h – 18 h"],
   ],
   langues: "Français",
-  annees: "7",
+  annees: "10",
   delaiReponse: "24 h",
 
   // 4. Mentions légales
