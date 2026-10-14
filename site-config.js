@@ -7,9 +7,11 @@ window.SITE = {
   // Bandeau « site en construction » en haut des pages (false pour le retirer)
   enConstruction: true,
 
-  // 1. Le Maître
-  nom: "Maître Sidi Kanté",
-  slogan: "Sagesse ancestrale",
+  // 1. Le cabinet et le médium
+  cabinet: "La Pleine Lune",
+  nomComplet: "Cabinet de naturopathie et d'élévation spirituelle « La Pleine Lune »",
+  nom: "Adam Mata",
+  slogan: "Médium voyant · Adam Mata",
   photo: "", // ex. "photo-maitre.jpg" (fichier placé dans le dossier du site)
 
   // 2. Contact

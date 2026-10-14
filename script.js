@@ -17,7 +17,7 @@ document.querySelectorAll("[data-site-mail]").forEach((a) => {
   a.href = `mailto:${SITE.email}`;
 });
 document.querySelectorAll("[data-whatsapp]").forEach((a) => {
-  a.href = waLink("Bonjour Maître, je souhaite prendre rendez-vous pour une consultation.");
+  a.href = waLink(`Bonjour ${SITE.nom}, je souhaite prendre rendez-vous pour une consultation.`);
 });
 const year = document.getElementById("year");
 if (year) year.textContent = new Date().getFullYear();
@@ -34,7 +34,7 @@ if (SITE.enConstruction) {
   document.querySelectorAll("[data-construction]").forEach((el) => el.remove());
 }
 
-// ----- Photo du Maître -----
+// ----- Photo du médium -----
 const frame = document.getElementById("photoFrame");
 if (frame && SITE.photo) {
   frame.classList.add("has-photo");
@@ -140,7 +140,7 @@ form?.addEventListener("submit", (e) => {
 
   const d = new FormData(form);
   const text =
-    `Bonjour Maître, je m'appelle ${d.get("prenom")}.\n` +
+    `Bonjour ${SITE.nom}, je m'appelle ${d.get("prenom")}.\n` +
     `Accompagnement souhaité : ${d.get("service")}\n` +
     `Mode : ${d.get("mode")}\n` +
     `Téléphone : ${d.get("tel")}\n\n` +

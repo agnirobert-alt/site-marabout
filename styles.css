@@ -75,14 +75,14 @@ em { color: var(--gold); font-style: italic; }
 .brand { display: flex; align-items: center; gap: .7rem; color: var(--gold); }
 .brand__mark { width: 36px; height: 36px; flex-shrink: 0; }
 .brand__text { font-family: var(--serif); font-size: 1.3rem; font-weight: 700; color: var(--cream); line-height: 1.05; }
-.brand__text small { display: block; font-family: var(--sans); font-size: .65rem; letter-spacing: .25em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-top: 3px; }
-.nav__links { display: flex; align-items: center; gap: 2rem; font-size: .92rem; }
+.brand__text small { display: block; white-space: nowrap; font-family: var(--sans); font-size: .65rem; letter-spacing: .25em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-top: 3px; }
+.nav__links { display: flex; align-items: center; gap: 1.8rem; font-size: .92rem; white-space: nowrap; }
 .nav__links a:not(.btn) { color: var(--muted); transition: color .2s; }
 .nav__links a:not(.btn):hover { color: var(--gold); }
 .nav__toggle { display: none; background: none; border: 0; padding: 8px; cursor: pointer; }
 .nav__toggle span { display: block; width: 24px; height: 2px; background: var(--cream); margin: 5px 0; transition: transform .3s, opacity .3s; }
 
-@media (max-width: 900px) {
+@media (max-width: 1060px) {
   .nav__toggle { display: block; }
   .nav__links {
     position: absolute; top: 100%; left: 0; right: 0;
