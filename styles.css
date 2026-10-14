@@ -359,3 +359,47 @@ em { color: var(--gold); font-style: italic; }
   .brand__text { font-size: 1.35rem; }
   .brand__text small { font-size: .66rem; letter-spacing: .14em; }
 }
+
+/* ---------- Onglets services & produits ---------- */
+.tabs {
+  display: flex; gap: .6rem; justify-content: center; flex-wrap: wrap;
+  margin: 0 auto 2.8rem;
+}
+.tabs__btn {
+  font: inherit; font-size: 1rem; font-weight: 500; cursor: pointer;
+  color: var(--muted); background: transparent;
+  border: 1px solid var(--line); border-radius: 999px;
+  padding: .7rem 1.3rem; white-space: nowrap;
+  transition: color .2s, border-color .2s, background .2s;
+}
+.tabs__btn:hover { color: var(--gold); border-color: rgba(233,196,106,.5); }
+.tabs__btn[aria-selected="true"] { background: linear-gradient(135deg, var(--gold), var(--gold-2)); color: #1a1430; border-color: transparent; font-weight: 600; }
+.tabs__btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.tabs__intro { text-align: center; color: var(--muted); margin: -1rem auto 2rem; max-width: 640px; font-style: italic; }
+.tabs__note { text-align: center; color: var(--muted); font-size: .85rem; max-width: 720px; margin: 2.5rem auto 0; opacity: .85; }
+.group__title {
+  font-size: 1.7rem; color: var(--gold); margin: 2.6rem 0 1.2rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.group__title::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.tabs__panel > .group__title:first-child, .tabs__intro + .group__title { margin-top: 0; }
+
+.items { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; }
+.item {
+  display: flex; flex-direction: column;
+  background: linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.01));
+  border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 1.5rem 1.5rem 1.3rem;
+  transition: border-color .25s, transform .25s;
+}
+.item:hover { border-color: rgba(233,196,106,.5); transform: translateY(-3px); }
+.item h4 { font-family: var(--serif); font-size: 1.35rem; font-weight: 600; color: var(--cream); margin: 0 0 .5rem; line-height: 1.2; }
+.item p { color: var(--muted); font-size: .92rem; margin: 0 0 1.1rem; flex: 1; }
+.item__cta { align-self: flex-start; color: var(--gold); font-weight: 600; font-size: .9rem; border-bottom: 1px solid transparent; transition: border-color .2s; }
+.item__cta:hover { border-color: var(--gold); }
+@media (max-width: 960px) { .items { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 620px) {
+  .items { grid-template-columns: 1fr; }
+  .tabs { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; margin-inline: -16px; padding: 0 16px 6px; scrollbar-width: none; }
+  .tabs::-webkit-scrollbar { display: none; }
+}

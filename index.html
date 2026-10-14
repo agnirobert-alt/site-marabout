@@ -121,45 +121,315 @@
       </div>
     </section>
 
-    <!-- ============ SERVICES ============ -->
+    <!-- ============ SERVICES ============
+         Généré depuis la liste des services. Chaque bouton ouvre WhatsApp avec le nom de l'article. -->
     <section class="section section--alt" id="services">
       <div class="container">
         <div class="section__head">
-          <p class="eyebrow">Services</p>
-          <h2>Un accompagnement adapté à chaque situation</h2>
-          <p>Chaque démarche commence par une consultation, afin de comprendre votre situation et de vous proposer ce qui vous convient réellement.</p>
+          <p class="eyebrow">Services & produits</p>
+          <h2>Tout ce que le cabinet vous propose</h2>
+          <p>Consultations, produits spirituels, formations et accompagnement : choisissez une catégorie.</p>
         </div>
-        <div class="cards">
-          <article class="card">
-            <div class="card__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></div>
-            <h3>Voyance & consultation</h3>
-            <p>Une séance de voyance pour éclairer une situation, une décision importante ou une période de doute.</p>
-          </article>
-          <article class="card">
-            <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M5 19c0-8 5-13 14-14-1 9-6 14-14 14z"/><path d="M5 19l7-7"/></svg></div>
-            <h3>Naturopathie & bien-être</h3>
-            <p>Conseils d'hygiène de vie, plantes et remèdes naturels pour soutenir votre équilibre, en complément d'un suivi médical, jamais à sa place.</p>
-          </article>
-          <article class="card">
-            <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></div>
-            <h3>Harmonie amoureuse & familiale</h3>
-            <p>Apaiser les tensions, restaurer le dialogue dans le couple ou la famille et retrouver un foyer serein.</p>
-          </article>
-          <article class="card">
-            <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/></svg></div>
-            <h3>Protection & levée de blocages</h3>
-            <p>Bains, prières et rituels de purification pour vous protéger, vous libérer de ce qui vous freine et retrouver élan et clarté.</p>
-          </article>
-          <article class="card">
-            <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M4 20h16M6 16l4-5 3 3 5-7"/><path d="M15 7h3v3"/></svg></div>
-            <h3>Réussite & projets</h3>
-            <p>Accompagnement spirituel pour un projet professionnel, un examen, une création d'entreprise ou un nouveau départ.</p>
-          </article>
-          <article class="card">
-            <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M12 3c2 3 5 4 5 8a5 5 0 0 1-10 0c0-4 3-5 5-8z"/><path d="M8 21h8"/></svg></div>
-            <h3>Élévation spirituelle</h3>
-            <p>Méditation, prières et bénédictions pour grandir intérieurement, marquer un nouveau départ ou bénir un foyer, un mariage ou un commerce.</p>
-          </article>
+        <div class="tabs" role="tablist" aria-label="Catégories de services">
+          <button class="tabs__btn" role="tab" id="tab-consultations" aria-controls="panel-consultations" aria-selected="true">Consultations</button>
+          <button class="tabs__btn" role="tab" id="tab-plantes" aria-controls="panel-plantes" aria-selected="false" tabindex="-1">Savons &amp; parfums</button>
+          <button class="tabs__btn" role="tab" id="tab-ecritures" aria-controls="panel-ecritures" aria-selected="false" tabindex="-1">Psaumes, Thora &amp; Coran</button>
+          <button class="tabs__btn" role="tab" id="tab-formations" aria-controls="panel-formations" aria-selected="false" tabindex="-1">Formations</button>
+          <button class="tabs__btn" role="tab" id="tab-accompagnement" aria-controls="panel-accompagnement" aria-selected="false" tabindex="-1">Accompagnement</button>
+        </div>
+        <div class="tabs__panel" role="tabpanel" id="panel-consultations" aria-labelledby="tab-consultations">
+          <ul class="items">
+            <li class="item">
+              <h4>Interprétation des rêves</h4>
+              <p>Comprendre les messages de vos rêves et ce qu'ils annoncent pour votre vie.</p>
+              <a href="#contact" class="item__cta" data-order="Interprétation des rêves" data-verb="Réserver" target="_blank" rel="noopener">Réserver <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Consultation approfondie</h4>
+              <p>Une lecture complète de votre vie : sources de blocages, dons spirituels, étoile, sacrifices, activités favorables à votre réussite, jours, heures et couleurs de chance, lignée et arbre de vie.</p>
+              <a href="#contact" class="item__cta" data-order="Consultation approfondie" data-verb="Réserver" target="_blank" rel="noopener">Réserver <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Consultation simple</h4>
+              <p>Une réponse ciblée à une question précise : l'avenir d'une relation, d'un mariage, d'un voyage, d'une promotion ou d'une démarche administrative.</p>
+              <a href="#contact" class="item__cta" data-order="Consultation simple" data-verb="Réserver" target="_blank" rel="noopener">Réserver <span aria-hidden="true">→</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="tabs__panel" role="tabpanel" id="panel-plantes" aria-labelledby="tab-plantes" hidden>
+          <p class="tabs__intro">Fabriqués à la main à base de plantes et d'écorces naturelles.</p>
+          <h3 class="group__title">Savons</h3>
+          <ul class="items">
+            <li class="item">
+              <h4>Savon de chance</h4>
+              <p>Pour stimuler votre chance et attirer des opportunités inattendues.</p>
+              <a href="#contact" class="item__cta" data-order="Savon de chance" data-verb="Commander" target="_blank" rel="noopener">Commander <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Savon de promotion</h4>
+              <p>Pour gagner la faveur de vos supérieurs et favoriser votre promotion.</p>
+              <a href="#contact" class="item__cta" data-order="Savon de promotion" data-verb="Commander" target="_blank" rel="noopener">Commander <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Savon d'attirance</h4>
+              <p>Pour être remarqué(e) et apprécié(e) des hommes ou des femmes de haut rang.</p>
+              <a href="#contact" class="item__cta" data-order="Savon d'attirance" data-verb="Commander" target="_blank" rel="noopener">Commander <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Savon d'harmonie du couple</h4>
+              <p>Pour favoriser la compréhension et éloigner les disputes inutiles.</p>
+              <a href="#contact" class="item__cta" data-order="Savon d'harmonie du couple" data-verb="Commander" target="_blank" rel="noopener">Commander <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Savon d'amour</h4>
+              <p>Pour raviver l'amour de votre partenaire et occuper ses pensées.</p>
+              <a href="#contact" class="item__cta" data-order="Savon d'amour" data-verb="Commander" target="_blank" rel="noopener">Commander <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Savon d'ouverture financière</h4>
+              <p>Pour attirer les opportunités d'affaires et d'argent.</p>
+              <a href="#contact" class="item__cta" data-order="Savon d'ouverture financière" data-verb="Commander" target="_blank" rel="noopener">Commander <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Savon de déblocage et désenvoûtement</h4>
+              <p>Pour nettoyer les attaques mystiques qui freinent votre évolution.</p>
+              <a href="#contact" class="item__cta" data-order="Savon de déblocage et désenvoûtement" data-verb="Commander" target="_blank" rel="noopener">Commander <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Savon de protection</h4>
+              <p>Pour restaurer votre aura et vous préserver des entités du bas astral.</p>
+              <a href="#contact" class="item__cta" data-order="Savon de protection" data-verb="Commander" target="_blank" rel="noopener">Commander <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Savon de retour à l'envoyeur</h4>
+              <p>Pour dresser une barrière contre les attaques mystiques et renvoyer le mal à son expéditeur.</p>
+              <a href="#contact" class="item__cta" data-order="Savon de retour à l'envoyeur" data-verb="Commander" target="_blank" rel="noopener">Commander <span aria-hidden="true">→</span></a>
+            </li>
+          </ul>
+          <h3 class="group__title">Parfums</h3>
+          <ul class="items">
+            <li class="item">
+              <h4>Parfum de charme</h4>
+              <p>Pour révéler votre beauté et votre pouvoir d'attraction.</p>
+              <a href="#contact" class="item__cta" data-order="Parfum de charme" data-verb="Commander" target="_blank" rel="noopener">Commander <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Parfum de chance extrême</h4>
+              <p>Pour accompagner votre chance au quotidien.</p>
+              <a href="#contact" class="item__cta" data-order="Parfum de chance extrême" data-verb="Commander" target="_blank" rel="noopener">Commander <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Parfum d'ouverture et d'opportunités</h4>
+              <p>Pour multiplier les contacts et décrocher de gros marchés.</p>
+              <a href="#contact" class="item__cta" data-order="Parfum d'ouverture et d'opportunités" data-verb="Commander" target="_blank" rel="noopener">Commander <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Parfum de clientèle</h4>
+              <p>Pour attirer la clientèle et favoriser la vente de vos marchandises.</p>
+              <a href="#contact" class="item__cta" data-order="Parfum de clientèle" data-verb="Commander" target="_blank" rel="noopener">Commander <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Parfum de visibilité</h4>
+              <p>Pour gagner en visibilité et en audience sur les réseaux sociaux.</p>
+              <a href="#contact" class="item__cta" data-order="Parfum de visibilité" data-verb="Commander" target="_blank" rel="noopener">Commander <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Parfum lumière</h4>
+              <p>Pour les hommes et femmes d'affaires qui visent les grands marchés.</p>
+              <a href="#contact" class="item__cta" data-order="Parfum lumière" data-verb="Commander" target="_blank" rel="noopener">Commander <span aria-hidden="true">→</span></a>
+            </li>
+          </ul>
+          <p class="tabs__note">Disponibles sur commande — prix et livraison communiqués sur WhatsApp. Ces produits sont des supports spirituels traditionnels : ils ne remplacent pas un avis ou un traitement médical.</p>
+        </div>
+        <div class="tabs__panel" role="tabpanel" id="panel-ecritures" aria-labelledby="tab-ecritures" hidden>
+          <p class="tabs__intro">Produits préparés à partir des codes des Psaumes, de la Thora et des sourates du Coran.</p>
+          <h3 class="group__title">Huiles</h3>
+          <ul class="items">
+            <li class="item">
+              <h4>Huile d'ouverture et de chance</h4>
+              <p>Pour attirer les opportunités de toutes parts au quotidien.</p>
+              <a href="#contact" class="item__cta" data-order="Huile d'ouverture et de chance" data-verb="Commander" target="_blank" rel="noopener">Commander <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Huile de protection de la maison</h4>
+              <p>Pour éloigner les ondes négatives de votre foyer.</p>
+              <a href="#contact" class="item__cta" data-order="Huile de protection de la maison" data-verb="Commander" target="_blank" rel="noopener">Commander <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Huile de combat spirituel</h4>
+              <p>Pour détruire les foyers négatifs établis contre vous.</p>
+              <a href="#contact" class="item__cta" data-order="Huile de combat spirituel" data-verb="Commander" target="_blank" rel="noopener">Commander <span aria-hidden="true">→</span></a>
+            </li>
+          </ul>
+          <h3 class="group__title">Eaux bénites coraniques</h3>
+          <ul class="items">
+            <li class="item">
+              <h4>Eau de l'intelligence</h4>
+              <p>Pour favoriser la mémoire et bien retenir ses cours.</p>
+              <a href="#contact" class="item__cta" data-order="Eau de l'intelligence" data-verb="Commander" target="_blank" rel="noopener">Commander <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Eau du commerce</h4>
+              <p>Pour dynamiser votre commerce, en ligne comme en boutique.</p>
+              <a href="#contact" class="item__cta" data-order="Eau du commerce" data-verb="Commander" target="_blank" rel="noopener">Commander <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Eau des champs</h4>
+              <p>Pour la bonne marche de vos cultures et de vos récoltes.</p>
+              <a href="#contact" class="item__cta" data-order="Eau des champs" data-verb="Commander" target="_blank" rel="noopener">Commander <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Eau de promotion et d'élévation</h4>
+              <p>Pour accompagner votre avancement professionnel.</p>
+              <a href="#contact" class="item__cta" data-order="Eau de promotion et d'élévation" data-verb="Commander" target="_blank" rel="noopener">Commander <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Eau de prospérité</h4>
+              <p>Pour la prospérité de vos affaires.</p>
+              <a href="#contact" class="item__cta" data-order="Eau de prospérité" data-verb="Commander" target="_blank" rel="noopener">Commander <span aria-hidden="true">→</span></a>
+            </li>
+          </ul>
+          <h3 class="group__title">Amulettes &amp; talismans de la Thora</h3>
+          <ul class="items">
+            <li class="item">
+              <h4>Amulette de gloire</h4>
+              <p>Pour la gloire et la bonne marche de vos activités.</p>
+              <a href="#contact" class="item__cta" data-order="Amulette de gloire" data-verb="Commander" target="_blank" rel="noopener">Commander <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Amulette de haute protection</h4>
+              <p>Une protection spirituelle de haut niveau.</p>
+              <a href="#contact" class="item__cta" data-order="Amulette de haute protection" data-verb="Commander" target="_blank" rel="noopener">Commander <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Talisman d'invisibilité</h4>
+              <p>Pour rester hors d'atteinte des attaques mystiques.</p>
+              <a href="#contact" class="item__cta" data-order="Talisman d'invisibilité" data-verb="Commander" target="_blank" rel="noopener">Commander <span aria-hidden="true">→</span></a>
+            </li>
+          </ul>
+          <h3 class="group__title">Bagues</h3>
+          <ul class="items">
+            <li class="item">
+              <h4>Bague de la Thora de richesse</h4>
+              <p>Pour attirer l'abondance et la richesse.</p>
+              <a href="#contact" class="item__cta" data-order="Bague de la Thora de richesse" data-verb="Commander" target="_blank" rel="noopener">Commander <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Bague de la Thora de protection</h4>
+              <p>Protection spirituelle contre les accidents et les agressions.</p>
+              <a href="#contact" class="item__cta" data-order="Bague de la Thora de protection" data-verb="Commander" target="_blank" rel="noopener">Commander <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Bague du psaume de l'influence</h4>
+              <p>Pour l'influence et la notoriété.</p>
+              <a href="#contact" class="item__cta" data-order="Bague du psaume de l'influence" data-verb="Commander" target="_blank" rel="noopener">Commander <span aria-hidden="true">→</span></a>
+            </li>
+          </ul>
+          <h3 class="group__title">Croix du psaume</h3>
+          <ul class="items">
+            <li class="item">
+              <h4>Croix de richesse</h4>
+              <p>Pour ouvrir les portes de l'abondance.</p>
+              <a href="#contact" class="item__cta" data-order="Croix de richesse" data-verb="Commander" target="_blank" rel="noopener">Commander <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Croix de protection et de déblocage</h4>
+              <p>Pour vous protéger et lever ce qui vous bloque.</p>
+              <a href="#contact" class="item__cta" data-order="Croix de protection et de déblocage" data-verb="Commander" target="_blank" rel="noopener">Commander <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Croix de chance extrême</h4>
+              <p>Pour une chance renforcée au quotidien.</p>
+              <a href="#contact" class="item__cta" data-order="Croix de chance extrême" data-verb="Commander" target="_blank" rel="noopener">Commander <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Croix de vérité</h4>
+              <p>Pour démasquer les complots et la trahison.</p>
+              <a href="#contact" class="item__cta" data-order="Croix de vérité" data-verb="Commander" target="_blank" rel="noopener">Commander <span aria-hidden="true">→</span></a>
+            </li>
+          </ul>
+          <h3 class="group__title">Bougies du psaume</h3>
+          <ul class="items">
+            <li class="item">
+              <h4>Bougie d'élévation et d'exaucement</h4>
+              <p>Pour l'élévation spirituelle et l'exaucement de vos prières.</p>
+              <a href="#contact" class="item__cta" data-order="Bougie d'élévation et d'exaucement" data-verb="Commander" target="_blank" rel="noopener">Commander <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Bougie de chance</h4>
+              <p>Pour attirer la chance.</p>
+              <a href="#contact" class="item__cta" data-order="Bougie de chance" data-verb="Commander" target="_blank" rel="noopener">Commander <span aria-hidden="true">→</span></a>
+            </li>
+          </ul>
+          <p class="tabs__note">Disponibles sur commande — prix et livraison communiqués sur WhatsApp. Ces produits sont des supports spirituels traditionnels : ils ne remplacent pas un avis ou un traitement médical.</p>
+        </div>
+        <div class="tabs__panel" role="tabpanel" id="panel-formations" aria-labelledby="tab-formations" hidden>
+          <ul class="items">
+            <li class="item">
+              <h4>Spiritualité ancestrale africaine (Vaudou)</h4>
+              <p>Connaissance des plantes, des racines et des feuilles.</p>
+              <a href="#contact" class="item__cta" data-order="Spiritualité ancestrale africaine (Vaudou)" data-verb="S'inscrire" target="_blank" rel="noopener">S'inscrire <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Maraboutage</h4>
+              <p>Carré magique, tableau magique et géomancie.</p>
+              <a href="#contact" class="item__cta" data-order="Maraboutage" data-verb="S'inscrire" target="_blank" rel="noopener">S'inscrire <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Spiritualité hindoue</h4>
+              <p>Initiation à la spiritualité de Shiva.</p>
+              <a href="#contact" class="item__cta" data-order="Spiritualité hindoue" data-verb="S'inscrire" target="_blank" rel="noopener">S'inscrire <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Les trois religions abrahamiques</h4>
+              <p>Spiritualité du judaïsme, du christianisme et de l'islam.</p>
+              <a href="#contact" class="item__cta" data-order="Les trois religions abrahamiques" data-verb="S'inscrire" target="_blank" rel="noopener">S'inscrire <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Préparation de savons, parfums et poudres</h4>
+              <p>Fabrication à base de plantes et de feuilles.</p>
+              <a href="#contact" class="item__cta" data-order="Préparation de savons, parfums et poudres" data-verb="S'inscrire" target="_blank" rel="noopener">S'inscrire <span aria-hidden="true">→</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="tabs__panel" role="tabpanel" id="panel-accompagnement" aria-labelledby="tab-accompagnement" hidden>
+          <ul class="items">
+            <li class="item">
+              <h4>Développement spirituel personnel</h4>
+              <p>Un suivi régulier pour grandir spirituellement.</p>
+              <a href="#contact" class="item__cta" data-order="Développement spirituel personnel" data-verb="Prendre contact" target="_blank" rel="noopener">Prendre contact <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Accompagnement du couple</h4>
+              <p>Un accompagnement spirituel pour renforcer votre union.</p>
+              <a href="#contact" class="item__cta" data-order="Accompagnement du couple" data-verb="Prendre contact" target="_blank" rel="noopener">Prendre contact <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Suivi spirituel des enfants</h4>
+              <p>Encadrement spirituel des enfants de 0 à 14 ans, avec l'accord et en présence des parents.</p>
+              <a href="#contact" class="item__cta" data-order="Suivi spirituel des enfants" data-verb="Prendre contact" target="_blank" rel="noopener">Prendre contact <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Bénédiction de lieux</h4>
+              <p>Lecture du Coran et des Psaumes pour attirer les ondes positives dans une nouvelle boutique, maison ou magasin.</p>
+              <a href="#contact" class="item__cta" data-order="Bénédiction de lieux" data-verb="Prendre contact" target="_blank" rel="noopener">Prendre contact <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Installation d'un égrégore</h4>
+              <p>Mise en place d'un égrégore puissant pour veiller sur votre vie.</p>
+              <a href="#contact" class="item__cta" data-order="Installation d'un égrégore" data-verb="Prendre contact" target="_blank" rel="noopener">Prendre contact <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Désir d'enfant</h4>
+              <p>Accompagnement spirituel des couples qui souhaitent un enfant, en complément du suivi médical.</p>
+              <a href="#contact" class="item__cta" data-order="Désir d'enfant" data-verb="Prendre contact" target="_blank" rel="noopener">Prendre contact <span aria-hidden="true">→</span></a>
+            </li>
+            <li class="item">
+              <h4>Troubles d'ordre spirituel</h4>
+              <p>Accompagnement des troubles d'origine spirituelle, en complément d'un suivi médical.</p>
+              <a href="#contact" class="item__cta" data-order="Troubles d'ordre spirituel" data-verb="Prendre contact" target="_blank" rel="noopener">Prendre contact <span aria-hidden="true">→</span></a>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -302,12 +572,13 @@
           </div>
           <label>Type d'accompagnement
             <select name="service">
-              <option>Voyance & consultation</option>
-              <option>Naturopathie & bien-être</option>
-              <option>Harmonie amoureuse & familiale</option>
-              <option>Protection & levée de blocages</option>
-              <option>Réussite & projets</option>
-              <option>Élévation spirituelle</option>
+              <option>Interprétation des rêves</option>
+              <option>Consultation approfondie</option>
+              <option>Consultation simple</option>
+              <option>Achat de savons ou parfums</option>
+              <option>Achat de produits (Psaumes, Thora, Coran)</option>
+              <option>Formation</option>
+              <option>Accompagnement spirituel</option>
               <option>Je ne sais pas encore</option>
             </select>
           </label>

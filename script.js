@@ -151,3 +151,29 @@ form?.addEventListener("submit", (e) => {
   window.open(waLink(text), "_blank", "noopener");
   form.reset();
 });
+
+// ----- Onglets des services -----
+const tabBtns = [...document.querySelectorAll(".tabs__btn")];
+const selectTab = (btn, focus) => {
+  tabBtns.forEach((b) => {
+    const on = b === btn;
+    b.setAttribute("aria-selected", String(on));
+    b.tabIndex = on ? 0 : -1;
+    document.getElementById(b.getAttribute("aria-controls")).hidden = !on;
+  });
+  if (focus) btn.focus();
+  btn.scrollIntoView({ block: "nearest", inline: "nearest" });
+};
+tabBtns.forEach((btn, i) => {
+  btn.addEventListener("click", () => selectTab(btn));
+  btn.addEventListener("keydown", (e) => {
+    const step = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+    if (step) selectTab(tabBtns[(i + step + tabBtns.length) % tabBtns.length], true);
+  });
+});
+
+// ----- Boutons « Commander / Réserver » : message WhatsApp prérempli -----
+document.querySelectorAll("[data-order]").forEach((a) => {
+  const verb = a.dataset.verb === "Commander" ? "commander" : "des informations sur";
+  a.href = waLink(`Bonjour ${SITE.nom}, je souhaite ${verb} : ${a.dataset.order}.`);
+});
