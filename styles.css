@@ -425,3 +425,7 @@ em { color: var(--gold); font-style: italic; }
 @media (max-width: 860px) {
   .gallery { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
 }
+
+/* ---------- Partager un témoignage ---------- */
+.share { text-align: center; margin-top: 2.8rem; }
+.share p { color: var(--muted); margin-bottom: 1.2rem; }

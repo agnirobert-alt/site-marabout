@@ -194,3 +194,14 @@ document.querySelectorAll("[data-order]").forEach((a) => {
   const verb = a.dataset.verb === "Commander" ? "commander" : "des informations sur";
   a.href = waLink(`Bonjour ${SITE.nom}, je souhaite ${verb} : ${a.dataset.order}.`);
 });
+
+// ----- Bouton « Partager mon témoignage » -----
+document.querySelectorAll("[data-share]").forEach((a) => {
+  a.href = waLink(
+    `Bonjour ${SITE.nom}, je souhaite partager mon témoignage.\n\n` +
+      "Mon témoignage : \n\n" +
+      "Prénom ou initiales à afficher : \n" +
+      "Ville : \n\n" +
+      "J'accepte que ce témoignage soit publié sur le site du cabinet."
+  );
+});
