@@ -9,6 +9,8 @@ const waLink = (text = "") =>
 document.querySelectorAll("[data-site]").forEach((el) => {
   const v = get(el.dataset.site);
   if (v) el.textContent = v;
+  // Information non renseignée : on masque toute la ligne qui la contient
+  else if (v === "") el.closest("[data-line]")?.remove();
 });
 document.querySelectorAll("[data-site-tel]").forEach((a) => {
   a.href = `tel:${(SITE.telephone || "").replace(/[^\d+]/g, "")}`;

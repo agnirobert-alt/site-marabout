@@ -1,11 +1,10 @@
 // =====================================================================
 //  INFORMATIONS DU SITE — tout se modifie ici.
-//  Les valeurs ci-dessous sont PROVISOIRES (site en construction) :
-//  elles seront remplacées par les vraies informations.
+//  Un champ laissé vide ("") masque la ligne correspondante sur le site.
 // =====================================================================
 window.SITE = {
-  // Bandeau « site en construction » en haut des pages (false pour le retirer)
-  enConstruction: true,
+  // Bandeau « site en construction » en haut des pages (true pour l'afficher)
+  enConstruction: false,
 
   // 1. Le cabinet et le médium
   cabinet: "La Pleine Lune",
@@ -35,7 +34,7 @@ window.SITE = {
   telephone: "+225 07 97 26 12 42", // appels directs
   whatsapp: "2250797261242", // format international, sans + ni espaces
   whatsappAffiche: "+225 07 97 26 12 42",
-  email: "contact@exemple.fr",
+  email: "", // à compléter — la ligne E-mail s'affiche automatiquement une fois renseignée
 
   // 3. Cabinet
   ville: "Bouaké",
@@ -57,13 +56,13 @@ window.SITE = {
   // 4. Mentions légales
   legal: {
     editeur: "Adam Souabirou — Cabinet « La Pleine Lune »",
-    statut: "[Statut juridique — à compléter]",
-    rccm: "[N° RCCM — à compléter]",
+    statut: "", // à compléter (laisser vide pour masquer la ligne)
+    rccm: "", // à compléter (laisser vide pour masquer la ligne)
     adresse: "Siège social : Bouaké, Côte d'Ivoire — Annexe : Bénin",
     directeur: "Adam Souabirou",
     conservation: "3 ans",
   },
-  hebergeur: "GitHub, Inc. — 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis — github.com",
+  hebergeur: "Vercel Inc. — 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis — vercel.com",
 
   // 5. Témoignages réels (avec l'accord des clients). Tant que la liste est vide,
   //    des emplacements « Témoignage à venir » sont affichés.
