@@ -205,3 +205,106 @@ document.querySelectorAll("[data-share]").forEach((a) => {
       "J'accepte que ce témoignage soit publié sur le site du cabinet."
   );
 });
+
+// ----- Diaporama de l'accueil -----
+const slider = document.getElementById("slider");
+const slides = SITE.diaporama || [];
+if (slider && slides.length) {
+  const DURATION = 5500;
+  const track = document.getElementById("sliderTrack");
+  const dotsBox = slider.querySelector(".slider__dots");
+  const bar = slider.querySelector(".slider__progress span");
+  const pad = (n) => String(n).padStart(2, "0");
+  slider.style.setProperty("--slide-ms", `${DURATION}ms`);
+
+  track.replaceChildren(
+    ...slides.map((s, i) => {
+      const fig = document.createElement("figure");
+      fig.className = "slider__slide";
+      fig.setAttribute("role", "group");
+      fig.setAttribute("aria-roledescription", "diapositive");
+      fig.setAttribute("aria-label", `${i + 1} sur ${slides.length}`);
+      const img = document.createElement("img");
+      img.src = s.image;
+      img.alt = s.titre;
+      img.width = 900;
+      img.height = 1200;
+      if (i) img.loading = "lazy";
+      const cap = document.createElement("figcaption");
+      cap.className = "slider__caption";
+      const count = document.createElement("span");
+      count.className = "slider__count";
+      count.textContent = `${pad(i + 1)} / ${pad(slides.length)}`;
+      const h = document.createElement("h3");
+      h.textContent = s.titre;
+      const p = document.createElement("p");
+      p.textContent = s.texte;
+      cap.append(count, h, p);
+      fig.append(img, cap);
+      return fig;
+    })
+  );
+  const figs = [...track.children];
+  const dots = slides.map((s, i) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "slider__dot";
+    b.setAttribute("role", "tab");
+    b.setAttribute("aria-label", s.titre);
+    b.addEventListener("click", () => go(i, true));
+    dotsBox.append(b);
+    return b;
+  });
+
+  let current = 0;
+  let timer = null;
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function go(i, manual) {
+    current = (i + slides.length) % slides.length;
+    figs.forEach((f, k) => f.classList.toggle("is-active", k === current));
+    dots.forEach((d, k) => d.setAttribute("aria-selected", String(k === current)));
+    if (manual) restart();
+  }
+  function restart() {
+    clearInterval(timer);
+    bar.classList.remove("is-running");
+    if (reduced || slides.length < 2) return;
+    void bar.offsetWidth; // relance l'animation de la barre
+    bar.classList.add("is-running");
+    timer = setInterval(() => {
+      go(current + 1);
+      bar.classList.remove("is-running");
+      void bar.offsetWidth;
+      bar.classList.add("is-running");
+    }, DURATION);
+  }
+  const pause = () => { clearInterval(timer); slider.classList.add("is-paused"); };
+  const resume = () => { slider.classList.remove("is-paused"); restart(); };
+
+  if (slides.length > 1) {
+    slider.querySelectorAll(".slider__arrow").forEach((b) => (b.hidden = false));
+    slider.querySelector(".slider__arrow--prev").addEventListener("click", () => go(current - 1, true));
+    slider.querySelector(".slider__arrow--next").addEventListener("click", () => go(current + 1, true));
+    slider.addEventListener("mouseenter", pause);
+    slider.addEventListener("mouseleave", resume);
+    slider.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight") go(current + 1, true);
+      if (e.key === "ArrowLeft") go(current - 1, true);
+    });
+    // Balayage au doigt sur mobile
+    let startX = null;
+    slider.addEventListener("touchstart", (e) => (startX = e.touches[0].clientX), { passive: true });
+    slider.addEventListener("touchend", (e) => {
+      if (startX === null) return;
+      const dx = e.changedTouches[0].clientX - startX;
+      if (Math.abs(dx) > 40) go(current + (dx < 0 ? 1 : -1), true);
+      startX = null;
+    });
+    document.addEventListener("visibilitychange", () => (document.hidden ? pause() : resume()));
+  } else {
+    dotsBox.hidden = true;
+  }
+  go(0);
+  restart();
+}

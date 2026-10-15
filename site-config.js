@@ -14,6 +14,15 @@ window.SITE = {
   slogan: "Médium voyant · Adam Souabirou",
   photo: "images/consultation-cauris.webp", // photo de la section « Le Médium »
 
+  // Diaporama en haut de page : une diapositive par photo, avec sa légende.
+  // Pour ajouter une photo : placez-la dans le dossier images/ et ajoutez une ligne.
+  // Photos à venir : bain de purification, consultation des divinités, préparation d'un savon de chance…
+  diaporama: [
+    { image: "images/consultation-cauris.webp", titre: "Consultation d'un client", texte: "Lecture des cauris pour éclairer la situation et répondre aux questions du consultant." },
+    { image: "images/remise-plantes.webp", titre: "Remise d'une préparation", texte: "Un sachet de plantes et de cauris, préparé spécialement pour un client." },
+    { image: "images/rituel-purification.webp", titre: "Rituel de purification", texte: "Fumigation de plantes sacrées pour purifier, protéger et lever les blocages." },
+  ],
+
   // 2. Contact
   telephone: "+225 07 97 26 12 42", // appels directs
   whatsapp: "2250797261242", // format international, sans + ni espaces
