@@ -26,6 +26,8 @@ window.SITE = {
     { image: "images/statuettes-couple.webp", titre: "Harmonie du couple", texte: "Statuettes préparées pour l'union et l'entente du couple." },
     { image: "images/bain-purification.webp", titre: "Bain de purification", texte: "Canaris de plantes préparés pour le bain de purification d'un client." },
     { image: "images/ceremonie-mer.webp", titre: "Cérémonie au bord de la mer", texte: "Offrandes et rituel collectif au bord de l'océan." },
+    { image: "images/rituel-fleuve.webp", titre: "Rituel au bord du fleuve", texte: "Bain rituel dans le fleuve, avec offrandes présentées dans une calebasse." },
+    { image: "images/rencontre-cabinet.webp", titre: "Rencontre au cabinet", texte: "Adam Souabirou reçoit des visiteurs venus le rencontrer." },
   ],
 
   // 2. Contact
