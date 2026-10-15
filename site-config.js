@@ -84,6 +84,11 @@ window.SITE = {
       auteur: "Témoignage client",
       ville: "",
     },
+    {
+      texte: "Merci infiniment, maître, de m'avoir aidé à sortir de la misère et d'avoir redonné le sourire à toute ma famille. Vous êtes le premier marabout féticheur honnête et sérieux que j'ai connu. Vous m'avez redonné confiance dans le culte vodoun du Bénin et avez installé la joie de vivre dans ma famille. Gardez ce sérieux dans votre travail.",
+      auteur: "Témoignage client",
+      ville: "",
+    },
   ],
 
   // 6. Nom de domaine (optionnel) — ex. "maitre-xxx.com" ; à relier sur GitHub Pages
