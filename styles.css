@@ -496,7 +496,7 @@ em { color: var(--gold); font-style: italic; }
 @media (prefers-reduced-motion: reduce) { .strip__track.is-running { animation: none; } .strip { overflow-x: auto; } }
 
 /* ---------- Ciel étoilé scintillant + halo lumineux ---------- */
-.sky { position: fixed; inset: 0; width: 100vw; height: 100vh; z-index: 35; pointer-events: none; mix-blend-mode: screen; }
+.sky { position: fixed; inset: 0; width: 100vw; height: 100vh; z-index: 35; pointer-events: none; }
 h1, h2 { text-shadow: 0 0 28px rgba(233, 196, 106, .18); }
 h1 em, h2 em { text-shadow: 0 0 18px rgba(233, 196, 106, .55), 0 0 42px rgba(233, 196, 106, .25); }
 .eyebrow { text-shadow: 0 0 14px rgba(233, 196, 106, .45); }

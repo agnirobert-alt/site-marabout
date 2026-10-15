@@ -18,13 +18,13 @@
     canvas.width = w * dpr;
     canvas.height = h * dpr;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    const count = Math.round(Math.min(90, (w * h) / 16000));
+    const count = Math.round(Math.min(150, (w * h) / 9000));
     stars = Array.from({ length: count }, (_, i) => ({
       x: Math.random() * w,
       y: Math.random() * h,
-      // Une étoile sur 8 est une grande étoile brillante à 4 branches
-      big: i % 8 === 0,
-      r: i % 8 === 0 ? 1.6 + Math.random() * 1.4 : 0.5 + Math.random() * 1.1,
+      // Une étoile sur 4 est une grande étoile brillante à 4 branches
+      big: i % 4 === 0,
+      r: i % 4 === 0 ? 2 + Math.random() * 1.8 : 0.8 + Math.random() * 1.3,
       color: COLORS[Math.floor(Math.random() * COLORS.length)],
       speed: 0.4 + Math.random() * 1.2,
       phase: Math.random() * Math.PI * 2,
@@ -36,23 +36,23 @@
     ctx.save();
     ctx.globalAlpha = a;
     ctx.shadowColor = `rgba(${s.color},1)`;
-    ctx.shadowBlur = s.big ? 14 : 6;
+    ctx.shadowBlur = s.big ? 24 : 10;
     ctx.fillStyle = `rgb(${s.color})`;
     ctx.beginPath();
     ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
     ctx.fill();
     if (s.big) {
       // Rayons lumineux en croix
-      const len = s.r * (5 + 3 * a);
+      const len = s.r * (7 + 5 * a);
       const grad = (x1, y1, x2, y2) => {
         const g = ctx.createLinearGradient(x1, y1, x2, y2);
         g.addColorStop(0, `rgba(${s.color},0)`);
-        g.addColorStop(0.5, `rgba(${s.color},${0.9 * a})`);
+        g.addColorStop(0.5, `rgba(${s.color},${a})`);
         g.addColorStop(1, `rgba(${s.color},0)`);
         return g;
       };
       ctx.shadowBlur = 0;
-      ctx.lineWidth = 1;
+      ctx.lineWidth = 1.4;
       ctx.strokeStyle = grad(s.x - len, s.y, s.x + len, s.y);
       ctx.beginPath(); ctx.moveTo(s.x - len, s.y); ctx.lineTo(s.x + len, s.y); ctx.stroke();
       ctx.strokeStyle = grad(s.x, s.y - len, s.x, s.y + len);
@@ -66,7 +66,7 @@
     const time = t / 1000;
     for (const s of stars) {
       const tw = (Math.sin(time * s.speed + s.phase) + 1) / 2; // 0 → 1
-      const a = s.big ? 0.25 + 0.75 * tw * tw : 0.15 + 0.6 * tw;
+      const a = s.big ? 0.45 + 0.55 * tw * tw : 0.35 + 0.65 * tw;
       if (!reduced) {
         s.y += s.drift;
         if (s.y < -5) s.y = h + 5;
@@ -76,7 +76,7 @@
     }
     // Étoile filante occasionnelle
     if (!reduced) {
-      if (!shooting && Math.random() < 0.0025) {
+      if (!shooting && Math.random() < 0.005) {
         shooting = { x: Math.random() * w * 0.7 + w * 0.15, y: Math.random() * h * 0.35, life: 0 };
       }
       if (shooting) {
