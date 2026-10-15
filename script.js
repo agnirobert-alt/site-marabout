@@ -79,8 +79,8 @@ if (quotes) {
     fig.append(bq, cap);
     quotes.append(fig);
   });
-  // Pendant la construction, des emplacements complètent la rangée de 3
-  const empty = SITE.enConstruction ? (3 - (list.length % 3)) % 3 || (list.length ? 0 : 3) : 0;
+  // Emplacements « Témoignage à venir » seulement tant qu'aucun avis n'est publié
+  const empty = SITE.enConstruction && !list.length ? 3 : 0;
   for (let i = 0; i < empty; i++) {
     const fig = document.createElement("figure");
     fig.className = "quote quote--empty";
