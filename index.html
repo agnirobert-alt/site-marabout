@@ -49,43 +49,37 @@
   </header>
 
   <main>
-    <!-- ============ HERO ============
-         Bande de photos qui défile en arrière-plan, générée depuis site-config.js (liste "diaporama"). -->
-    <section class="hero hero--media">
-      <div class="hero__media">
-        <div class="hero__track" id="heroTrack">
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero__stars" aria-hidden="true"></div>
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <p class="eyebrow" data-site="nomComplet">Cabinet de naturopathie et d'élévation spirituelle « La Pleine Lune »</p>
+        <h1>Retrouvez l'équilibre, la clarté<br>et la <em>sérénité</em> intérieure</h1>
+        <p class="hero__lead">
+          Depuis <span data-site="annees">10</span> ans, le médium voyant <span data-site="nom">Adam Souabirou</span> accompagne celles et ceux qui traversent
+          une période de doute, de blocage ou de transition, grâce aux savoirs transmis
+          par ses ancêtres.
+        </p>
+        <div class="hero__cta">
+          <a href="#contact" class="btn btn--gold">Demander une consultation</a>
+          <a href="#services" class="btn btn--ghost">Découvrir les services</a>
+        </div>
+      </div>
+
+      <!-- Bande de photos défilante, générée depuis site-config.js (liste "diaporama") -->
+      <div class="strip">
+        <div class="strip__track" id="heroTrack">
           <figure class="hero__tile">
             <img src="images/consultation-cauris.webp" alt="Consultation d'un client" width="900" height="1200">
             <figcaption><strong>Consultation d'un client</strong></figcaption>
           </figure>
-          <figure class="hero__tile">
-            <img src="images/remise-plantes.webp" alt="Remise d'une préparation" width="900" height="1200">
-            <figcaption><strong>Remise d'une préparation</strong></figcaption>
-          </figure>
-          <figure class="hero__tile">
-            <img src="images/rituel-purification.webp" alt="Rituel de purification" width="900" height="1200">
-            <figcaption><strong>Rituel de purification</strong></figcaption>
-          </figure>
         </div>
       </div>
-      <div class="hero__overlay" aria-hidden="true"></div>
 
       <div class="container hero__inner">
-        <div class="hero__text">
-          <p class="hero__brand" data-site="cabinet">La Pleine Lune</p>
-          <p class="eyebrow">Médium voyant · <span data-site="nom">Adam Souabirou</span></p>
-          <h1>Retrouvez l'équilibre, la clarté et la <em>sérénité</em> intérieure.</h1>
-          <p class="hero__lead">
-            Depuis <span data-site="annees">10</span> ans, le médium voyant <span data-site="nom">Adam Souabirou</span> accompagne celles et ceux qui traversent
-            une période de doute, de blocage ou de transition, grâce aux savoirs transmis par ses ancêtres.
-          </p>
-          <div class="hero__cta">
-            <a href="#contact" class="btn btn--gold">Demander une consultation</a>
-            <a href="#services" class="btn btn--ghost">Découvrir les services</a>
-          </div>
-        </div>
         <ul class="hero__facts">
-          <li><strong><span data-site="annees">10</span> ans</strong><span>de pratique</span></li>
+          <li><strong><span data-site="annees">10</span> ans</strong><span>années de pratique</span></li>
           <li><strong>100%</strong><span>confidentiel</span></li>
           <li><strong data-site="langues">Français</strong><span>langue de consultation</span></li>
         </ul>
