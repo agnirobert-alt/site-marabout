@@ -429,3 +429,21 @@ em { color: var(--gold); font-style: italic; }
 /* ---------- Partager un témoignage ---------- */
 .share { text-align: center; margin-top: 2.8rem; }
 .share p { color: var(--muted); margin-bottom: 1.2rem; }
+
+/* ---------- Bandeau d'appel à l'action ---------- */
+.cta-band {
+  position: relative; overflow: hidden;
+  padding: 80px 0;
+  background: radial-gradient(ellipse at 15% 50%, rgba(233,196,106,.22), transparent 55%), linear-gradient(135deg, #2a1f4d, #15122e);
+  border-block: 1px solid var(--line);
+}
+.cta-band__inner { display: flex; align-items: center; justify-content: space-between; gap: 2.5rem; }
+.cta-band h2 { margin-bottom: .4rem; }
+.cta-band p { color: var(--text); opacity: .85; margin: 0; font-size: 1.1rem; }
+.cta-band__btn { gap: .6rem; flex-shrink: 0; padding: 1.1rem 1.9rem; font-size: 1.05rem; }
+.cta-band__btn svg { width: 22px; height: 22px; }
+@media (max-width: 860px) {
+  .cta-band { padding: 64px 0; }
+  .cta-band__inner { flex-direction: column; text-align: center; gap: 1.8rem; }
+  .cta-band__btn { width: 100%; max-width: 420px; }
+}
