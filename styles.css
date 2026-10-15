@@ -494,3 +494,11 @@ em { color: var(--gold); font-style: italic; }
   .hero__tile figcaption span { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { .strip__track.is-running { animation: none; } .strip { overflow-x: auto; } }
+
+/* ---------- Ciel étoilé scintillant + halo lumineux ---------- */
+.sky { position: fixed; inset: 0; width: 100vw; height: 100vh; z-index: 35; pointer-events: none; mix-blend-mode: screen; }
+h1, h2 { text-shadow: 0 0 28px rgba(233, 196, 106, .18); }
+h1 em, h2 em { text-shadow: 0 0 18px rgba(233, 196, 106, .55), 0 0 42px rgba(233, 196, 106, .25); }
+.eyebrow { text-shadow: 0 0 14px rgba(233, 196, 106, .45); }
+.brand__mark { filter: drop-shadow(0 0 6px rgba(233, 196, 106, .55)); }
+.btn--gold { box-shadow: 0 8px 30px -10px rgba(233,196,106,.6), 0 0 22px -4px rgba(233,196,106,.45); }
