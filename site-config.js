@@ -79,6 +79,11 @@ window.SITE = {
       auteur: "Un client",
       ville: "",
     },
+    {
+      texte: "Je partage mon expérience pour aider ceux qui souffrent. Après plusieurs échecs en amour et au travail, j'ai contacté Adam Souabirou. En quelques jours, ma situation a changé : retour de mon partenaire et déblocage financier. Un travail discret et rapide. Merci du fond du cœur.",
+      auteur: "Témoignage client",
+      ville: "",
+    },
   ],
 
   // 6. Nom de domaine (optionnel) — ex. "maitre-xxx.com" ; à relier sur GitHub Pages
