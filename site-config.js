@@ -16,7 +16,6 @@ window.SITE = {
 
   // Diaporama en haut de page : une diapositive par photo, avec sa légende.
   // Pour ajouter une photo : placez-la dans le dossier images/ et ajoutez une ligne.
-  // Photo à venir : consultation des divinités…
   diaporama: [
     { image: "images/consultation-cauris.webp", titre: "Consultation d'un client", texte: "Lecture des cauris pour éclairer la situation et répondre aux questions du consultant." },
     { image: "images/remise-plantes.webp", titre: "Remise d'une préparation", texte: "Un sachet de plantes et de cauris, préparé spécialement pour un client." },
@@ -28,6 +27,8 @@ window.SITE = {
     { image: "images/ceremonie-mer.webp", titre: "Cérémonie au bord de la mer", texte: "Offrandes et rituel collectif au bord de l'océan." },
     { image: "images/rituel-fleuve.webp", titre: "Rituel au bord du fleuve", texte: "Bain rituel dans le fleuve, avec offrandes présentées dans une calebasse." },
     { image: "images/rencontre-cabinet.webp", titre: "Rencontre au cabinet", texte: "Adam Souabirou reçoit des visiteurs venus le rencontrer." },
+    { image: "images/offrandes-divinites.webp", titre: "Offrandes aux divinités", texte: "Kola, huile de palme et boissons déposées devant l'autel pour consulter les divinités." },
+    { image: "images/preparation-ceremonie.webp", titre: "Préparation d'une cérémonie", texte: "Poudres, graines, chasse-mouches et fagots disposés avant le rituel." },
   ],
 
   // 2. Contact
