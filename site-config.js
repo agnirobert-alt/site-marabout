@@ -21,6 +21,8 @@ window.SITE = {
     { image: "images/consultation-cauris.webp", titre: "Consultation d'un client", texte: "Lecture des cauris pour éclairer la situation et répondre aux questions du consultant." },
     { image: "images/remise-plantes.webp", titre: "Remise d'une préparation", texte: "Un sachet de plantes et de cauris, préparé spécialement pour un client." },
     { image: "images/rituel-purification.webp", titre: "Rituel de purification", texte: "Fumigation de plantes sacrées pour purifier, protéger et lever les blocages." },
+    { image: "images/huiles-parfums.webp", titre: "Huiles et parfums", texte: "Préparations à base de plantes et de graines naturelles, mises en flacon." },
+    { image: "images/statuettes-couple.webp", titre: "Harmonie du couple", texte: "Statuettes préparées pour l'union et l'entente du couple." },
   ],
 
   // 2. Contact
