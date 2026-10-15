@@ -49,46 +49,43 @@
   </header>
 
   <main>
-    <!-- ============ HERO ============ -->
-    <section class="hero">
-      <div class="hero__stars" aria-hidden="true"></div>
-      <div class="hero__glow" aria-hidden="true"></div>
-      <div class="container hero__inner">
-        <div class="hero__grid">
-        <div class="hero__text">
-        <p class="eyebrow" data-site="nomComplet">Cabinet de naturopathie et d'élévation spirituelle « La Pleine Lune »</p>
-        <h1>Retrouvez l'équilibre, la clarté<br>et la <em>sérénité</em> intérieure</h1>
-        <p class="hero__lead">
-          Depuis <span data-site="annees">10</span> ans, le médium voyant <span data-site="nom">Adam Souabirou</span> accompagne celles et ceux qui traversent
-          une période de doute, de blocage ou de transition, grâce aux savoirs transmis
-          par ses ancêtres.
-        </p>
-        <div class="hero__cta">
-          <a href="#contact" class="btn btn--gold">Demander une consultation</a>
-          <a href="#services" class="btn btn--ghost">Découvrir les services</a>
+    <!-- ============ HERO ============
+         Bande de photos qui défile en arrière-plan, générée depuis site-config.js (liste "diaporama"). -->
+    <section class="hero hero--media">
+      <div class="hero__media">
+        <div class="hero__track" id="heroTrack">
+          <figure class="hero__tile">
+            <img src="images/consultation-cauris.webp" alt="Consultation d'un client" width="900" height="1200">
+            <figcaption><strong>Consultation d'un client</strong></figcaption>
+          </figure>
+          <figure class="hero__tile">
+            <img src="images/remise-plantes.webp" alt="Remise d'une préparation" width="900" height="1200">
+            <figcaption><strong>Remise d'une préparation</strong></figcaption>
+          </figure>
+          <figure class="hero__tile">
+            <img src="images/rituel-purification.webp" alt="Rituel de purification" width="900" height="1200">
+            <figcaption><strong>Rituel de purification</strong></figcaption>
+          </figure>
         </div>
-        </div>
+      </div>
+      <div class="hero__overlay" aria-hidden="true"></div>
 
-        <!-- Diaporama : diapositives générées depuis site-config.js (liste "diaporama") -->
-        <div class="slider" id="slider" role="region" aria-roledescription="carrousel" aria-label="Le médium en action" tabindex="0">
-          <div class="slider__track" id="sliderTrack">
-            <figure class="slider__slide is-active">
-              <img src="images/consultation-cauris.webp" alt="Consultation d'un client" width="900" height="1200">
-              <figcaption class="slider__caption">
-                <span class="slider__count">01</span>
-                <h3>Consultation d'un client</h3>
-                <p>Lecture des cauris pour éclairer la situation et répondre aux questions du consultant.</p>
-              </figcaption>
-            </figure>
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="hero__brand" data-site="cabinet">La Pleine Lune</p>
+          <p class="eyebrow">Médium voyant · <span data-site="nom">Adam Souabirou</span></p>
+          <h1>Retrouvez l'équilibre, la clarté et la <em>sérénité</em> intérieure.</h1>
+          <p class="hero__lead">
+            Depuis <span data-site="annees">10</span> ans, le médium voyant <span data-site="nom">Adam Souabirou</span> accompagne celles et ceux qui traversent
+            une période de doute, de blocage ou de transition, grâce aux savoirs transmis par ses ancêtres.
+          </p>
+          <div class="hero__cta">
+            <a href="#contact" class="btn btn--gold">Demander une consultation</a>
+            <a href="#services" class="btn btn--ghost">Découvrir les services</a>
           </div>
-          <button class="slider__arrow slider__arrow--prev" type="button" aria-label="Photo précédente" hidden>‹</button>
-          <button class="slider__arrow slider__arrow--next" type="button" aria-label="Photo suivante" hidden>›</button>
-          <div class="slider__dots" role="tablist" aria-label="Choisir une photo"></div>
-          <div class="slider__progress" aria-hidden="true"><span></span></div>
-        </div>
         </div>
         <ul class="hero__facts">
-          <li><strong><span data-site="annees">10</span> ans</strong><span>années de pratique</span></li>
+          <li><strong><span data-site="annees">10</span> ans</strong><span>de pratique</span></li>
           <li><strong>100%</strong><span>confidentiel</span></li>
           <li><strong data-site="langues">Français</strong><span>langue de consultation</span></li>
         </ul>
