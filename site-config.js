@@ -51,7 +51,13 @@ window.SITE = {
   // 5. Témoignages réels (avec l'accord des clients). Tant que la liste est vide,
   //    des emplacements « Témoignage à venir » sont affichés.
   //    Exemple : { texte: "…", auteur: "A. D.", ville: "Paris" }
-  temoignages: [],
+  temoignages: [
+    {
+      texte: "J'ai connu Adam Souabirou grâce à des témoignages sur Facebook. Un vrai marabout n'a pas besoin de faire de la publicité : ce sont les témoignages qui le prouvent. Il intervient dans plusieurs domaines : retour d'affection, attirance de clientèle, savons et parfums de chance… Je suis fière, car ce maître est venu effacer mes larmes. Je suis remplie de joie au moment où j'écris ce témoignage.",
+      auteur: "Une cliente",
+      ville: "",
+    },
+  ],
 
   // 6. Nom de domaine (optionnel) — ex. "maitre-xxx.com" ; à relier sur GitHub Pages
   domaine: "",

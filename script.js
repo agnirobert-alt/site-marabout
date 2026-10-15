@@ -67,27 +67,27 @@ if (frame && SITE.photo) {
 const quotes = document.getElementById("quotes");
 if (quotes) {
   const list = SITE.temoignages || [];
-  if (list.length) {
-    list.forEach((t) => {
-      const fig = document.createElement("figure");
-      fig.className = "quote";
-      const bq = document.createElement("blockquote");
-      bq.textContent = `« ${t.texte} »`;
-      const cap = document.createElement("figcaption");
-      const who = document.createElement("strong");
-      who.textContent = t.auteur;
-      cap.append(who, t.ville ? ` · ${t.ville}` : "");
-      fig.append(bq, cap);
-      quotes.append(fig);
-    });
-  } else if (SITE.enConstruction) {
-    for (let i = 0; i < 3; i++) {
-      const fig = document.createElement("figure");
-      fig.className = "quote quote--empty";
-      fig.innerHTML = "<blockquote>Témoignage à venir</blockquote><figcaption>Les avis de nos consultants seront publiés ici, avec leur accord.</figcaption>";
-      quotes.append(fig);
-    }
-  } else {
+  list.forEach((t) => {
+    const fig = document.createElement("figure");
+    fig.className = "quote";
+    const bq = document.createElement("blockquote");
+    bq.textContent = `« ${t.texte} »`;
+    const cap = document.createElement("figcaption");
+    const who = document.createElement("strong");
+    who.textContent = t.auteur;
+    cap.append(who, t.ville ? ` · ${t.ville}` : "");
+    fig.append(bq, cap);
+    quotes.append(fig);
+  });
+  // Pendant la construction, des emplacements complètent la rangée de 3
+  const empty = SITE.enConstruction ? (3 - (list.length % 3)) % 3 || (list.length ? 0 : 3) : 0;
+  for (let i = 0; i < empty; i++) {
+    const fig = document.createElement("figure");
+    fig.className = "quote quote--empty";
+    fig.innerHTML = "<blockquote>Témoignage à venir</blockquote><figcaption>Les avis de nos consultants seront publiés ici, avec leur accord.</figcaption>";
+    quotes.append(fig);
+  }
+  if (!list.length && !empty) {
     document.getElementById("temoignages")?.remove();
     document.querySelector('a[href="#temoignages"]')?.remove();
   }
