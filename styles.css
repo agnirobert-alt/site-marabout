@@ -412,7 +412,9 @@ em { color: var(--gold); font-style: italic; }
 .hours tr.is-today th, .hours tr.is-today td { color: var(--gold); font-weight: 600; }
 
 /* ---------- Galerie ---------- */
-.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+.gallery__item--wide { grid-column: span 2; }
+.gallery__item--wide img { position: absolute; inset: 0; aspect-ratio: auto; }
 .gallery__item { margin: 0; position: relative; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); }
 .gallery__item img { width: 100%; height: 100%; aspect-ratio: 3 / 4; object-fit: cover; transition: transform .6s ease; }
 .gallery__item:hover img { transform: scale(1.04); }

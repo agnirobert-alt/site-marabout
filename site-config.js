@@ -16,10 +16,11 @@ window.SITE = {
 
   // Diaporama en haut de page : une diapositive par photo, avec sa légende.
   // Pour ajouter une photo : placez-la dans le dossier images/ et ajoutez une ligne.
-  // Photos à venir : bain de purification, consultation des divinités, préparation d'un savon de chance…
+  // Photo à venir : consultation des divinités…
   diaporama: [
     { image: "images/consultation-cauris.webp", titre: "Consultation d'un client", texte: "Lecture des cauris pour éclairer la situation et répondre aux questions du consultant." },
     { image: "images/remise-plantes.webp", titre: "Remise d'une préparation", texte: "Un sachet de plantes et de cauris, préparé spécialement pour un client." },
+    { image: "images/preparation-savons.webp", titre: "Préparation des savons", texte: "Savons de chance et de protection préparés à base de plantes, de feuilles et d'écorces." },
     { image: "images/rituel-purification.webp", titre: "Rituel de purification", texte: "Fumigation de plantes sacrées pour purifier, protéger et lever les blocages." },
     { image: "images/huiles-parfums.webp", titre: "Huiles et parfums", texte: "Préparations à base de plantes et de graines naturelles, mises en flacon." },
     { image: "images/statuettes-couple.webp", titre: "Harmonie du couple", texte: "Statuettes préparées pour l'union et l'entente du couple." },
