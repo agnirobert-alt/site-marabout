@@ -23,6 +23,8 @@ window.SITE = {
     { image: "images/rituel-purification.webp", titre: "Rituel de purification", texte: "Fumigation de plantes sacrées pour purifier, protéger et lever les blocages." },
     { image: "images/huiles-parfums.webp", titre: "Huiles et parfums", texte: "Préparations à base de plantes et de graines naturelles, mises en flacon." },
     { image: "images/statuettes-couple.webp", titre: "Harmonie du couple", texte: "Statuettes préparées pour l'union et l'entente du couple." },
+    { image: "images/bain-purification.webp", titre: "Bain de purification", texte: "Canaris de plantes préparés pour le bain de purification d'un client." },
+    { image: "images/ceremonie-mer.webp", titre: "Cérémonie au bord de la mer", texte: "Offrandes et rituel collectif au bord de l'océan." },
   ],
 
   // 2. Contact
