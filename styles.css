@@ -502,3 +502,17 @@ h1 em, h2 em { text-shadow: 0 0 18px rgba(233, 196, 106, .55), 0 0 42px rgba(233
 .eyebrow { text-shadow: 0 0 14px rgba(233, 196, 106, .45); }
 .brand__mark { filter: drop-shadow(0 0 6px rgba(233, 196, 106, .55)); }
 .btn--gold { box-shadow: 0 8px 30px -10px rgba(233,196,106,.6), 0 0 22px -4px rgba(233,196,106,.45); }
+
+/* ---------- Fond de l'accueil : bougie entre les mains, en transparence ---------- */
+.hero__bg {
+  position: absolute; left: 0; right: 0; top: 0;
+  height: min(100vh, 920px);
+  background: url("images/fond-bougie.webp") center 62% / cover no-repeat;
+  opacity: .42;
+  -webkit-mask-image: radial-gradient(ellipse 70% 75% at 50% 50%, #000 35%, transparent 85%);
+          mask-image: radial-gradient(ellipse 70% 75% at 50% 50%, #000 35%, transparent 85%);
+  pointer-events: none;
+}
+@media (max-width: 760px) {
+  .hero__bg { background-position: center 60%; opacity: .38; }
+}
