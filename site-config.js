@@ -12,7 +12,7 @@ window.SITE = {
   nomComplet: "Cabinet de naturopathie et d'élévation spirituelle « La Pleine Lune »",
   nom: "Adam Souabirou",
   slogan: "Médium voyant · Adam Souabirou",
-  photo: "", // ex. "photo-maitre.jpg" (fichier placé dans le dossier du site)
+  photo: "images/consultation-cauris.webp", // photo de la section « Le Médium »
 
   // 2. Contact
   telephone: "+225 07 97 26 12 42", // appels directs

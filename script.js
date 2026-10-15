@@ -58,7 +58,7 @@ if (frame && SITE.photo) {
   frame.innerHTML = "";
   const img = document.createElement("img");
   img.src = SITE.photo;
-  img.alt = `Portrait de ${SITE.nom}`;
+  img.alt = `Consultation au cabinet ${SITE.cabinet}`;
   img.className = "about__photo";
   frame.append(img);
 }
