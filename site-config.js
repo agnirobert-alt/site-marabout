@@ -57,6 +57,11 @@ window.SITE = {
       auteur: "Une cliente",
       ville: "",
     },
+    {
+      texte: "J'étais dans une situation très difficile : me nourrir et couvrir mes besoins n'était pas facile. J'avais consulté plusieurs marabouts, sans résultat. Un jour, en faisant des recherches sur Internet, j'ai découvert Adam Souabirou. Je lui ai expliqué mon cas ; il m'a fait une consultation puis des rituels. À ce moment-là, mes candidatures d'emploi étaient toujours rejetées. Quelques jours après les rituels, une des entreprises qui avait refusé mon dossier m'a rappelé pour me dire de venir prendre service. Aujourd'hui, j'ai mon emploi, tout a commencé à marcher pour moi et je ne manque de rien.",
+      auteur: "Un client",
+      ville: "",
+    },
   ],
 
   // 6. Nom de domaine (optionnel) — ex. "maitre-xxx.com" ; à relier sur GitHub Pages
