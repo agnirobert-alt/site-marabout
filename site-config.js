@@ -34,7 +34,7 @@ window.SITE = {
   telephone: "+225 07 97 26 12 42", // appels directs
   whatsapp: "2250797261242", // format international, sans + ni espaces
   whatsappAffiche: "+225 07 97 26 12 42",
-  email: "", // à compléter — la ligne E-mail s'affiche automatiquement une fois renseignée
+  email: "contact@lumiere-accomplie.com", // reçoit aussi les demandes du formulaire (via FormSubmit)
 
   // 3. Cabinet
   ville: "Bouaké",
@@ -90,6 +90,6 @@ window.SITE = {
     },
   ],
 
-  // 6. Nom de domaine (optionnel) — ex. "maitre-xxx.com" ; à relier sur GitHub Pages
-  domaine: "",
+  // 6. Nom de domaine
+  domaine: "lumiere-accomplie.com",
 };

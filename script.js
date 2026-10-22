@@ -138,7 +138,7 @@ if ("IntersectionObserver" in window) {
   });
 }
 
-// ----- Formulaire : envoi de la demande par WhatsApp -----
+// ----- Formulaire : demande envoyée par e-mail (FormSubmit) + ouverture de WhatsApp -----
 const form = document.getElementById("contactForm");
 const msg = document.getElementById("formMsg");
 
@@ -165,9 +165,34 @@ form?.addEventListener("submit", (e) => {
     `Téléphone : ${d.get("tel")}\n\n` +
     `${d.get("message")}`;
 
-  msg.classList.remove("is-error");
-  msg.textContent = "Merci ! WhatsApp va s'ouvrir avec votre message prêt à envoyer.";
+  // 1. Envoi automatique par e-mail au cabinet (sans action du client)
+  const emailSent = SITE.email
+    ? fetch(`https://formsubmit.co/ajax/${SITE.email}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          _subject: `Nouvelle demande — ${d.get("prenom")} (${d.get("service")})`,
+          _template: "table",
+          _captcha: "false",
+          Prénom: d.get("prenom"),
+          Téléphone: d.get("tel"),
+          Accompagnement: d.get("service"),
+          Mode: d.get("mode"),
+          Message: d.get("message"),
+        }),
+        keepalive: true,
+      }).then((r) => r.ok).catch(() => false)
+    : Promise.resolve(false);
+
+  // 2. WhatsApp s'ouvre tout de suite (avant tout délai, pour ne pas être bloqué par le navigateur)
   window.open(waLink(text), "_blank", "noopener");
+  msg.classList.remove("is-error");
+  msg.textContent = "Envoi de votre demande…";
+  emailSent.then((ok) => {
+    msg.textContent = ok
+      ? "Merci ! Votre demande a bien été envoyée au cabinet. Vous pouvez aussi l'envoyer sur WhatsApp."
+      : "Merci ! Envoyez votre message dans WhatsApp pour finaliser votre demande.";
+  });
   form.reset();
 });
 
