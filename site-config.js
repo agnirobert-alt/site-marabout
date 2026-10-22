@@ -7,8 +7,8 @@ window.SITE = {
   enConstruction: false,
 
   // 1. Le cabinet et le médium
-  cabinet: "La Pleine Lune",
-  nomComplet: "Cabinet de naturopathie et d'élévation spirituelle « La Pleine Lune »",
+  cabinet: "Lumière Accomplie",
+  nomComplet: "Cabinet spirituel « Lumière Accomplie »",
   nom: "Adam Souabirou",
   slogan: "Médium voyant · Adam Souabirou",
   photo: "images/consultation-cauris.webp", // photo de la section « Le Médium »
@@ -55,7 +55,7 @@ window.SITE = {
 
   // 4. Mentions légales
   legal: {
-    editeur: "Adam Souabirou — Cabinet « La Pleine Lune »",
+    editeur: "Adam Souabirou — Cabinet spirituel « Lumière Accomplie »",
     statut: "", // à compléter (laisser vide pour masquer la ligne)
     rccm: "", // à compléter (laisser vide pour masquer la ligne)
     adresse: "Siège social : Bouaké, Côte d'Ivoire — Annexe : Bénin",
