@@ -549,3 +549,7 @@ h1 em, h2 em { text-shadow: 0 0 18px rgba(233, 196, 106, .55), 0 0 42px rgba(233
 /* 4 témoignages : grille 2 × 2 plutôt qu'une rangée de 3 + 1 */
 .quotes:has(> .quote:nth-child(4):last-child) { grid-template-columns: repeat(2, 1fr); max-width: 920px; margin: 0 auto; }
 @media (max-width: 900px) { .quotes:has(> .quote:nth-child(4):last-child) { grid-template-columns: 1fr; } }
+
+/* Biographie dans l'accueil */
+.hero__lead--bio { max-width: 780px; font-size: 1.02rem; line-height: 1.75; }
+.hero__lead--bio strong { color: var(--gold); font-weight: 600; }
