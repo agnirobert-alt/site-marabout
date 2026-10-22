@@ -9,8 +9,8 @@ window.SITE = {
   // 1. Le cabinet et le médium
   cabinet: "Lumière Accomplie",
   nomComplet: "Cabinet spirituel « Lumière Accomplie »",
-  nom: "Adam Souabirou",
-  slogan: "Médium voyant · Adam Souabirou",
+  nom: "Adam Sorbour",
+  slogan: "Médium voyant · Adam Sorbour",
   photo: "images/consultation-cauris.webp", // photo de la section « Le Médium »
 
   // Diaporama en haut de page : une diapositive par photo, avec sa légende.
@@ -25,7 +25,7 @@ window.SITE = {
     { image: "images/bain-purification.webp", titre: "Bain de purification", texte: "Canaris de plantes préparés pour le bain de purification d'un client." },
     { image: "images/ceremonie-mer.webp", titre: "Cérémonie au bord de la mer", texte: "Offrandes et rituel collectif au bord de l'océan." },
     { image: "images/rituel-fleuve.webp", titre: "Rituel au bord du fleuve", texte: "Bain rituel dans le fleuve, avec offrandes présentées dans une calebasse." },
-    { image: "images/rencontre-cabinet.webp", titre: "Rencontre au cabinet", texte: "Adam Souabirou reçoit des visiteurs venus le rencontrer." },
+    { image: "images/rencontre-cabinet.webp", titre: "Rencontre au cabinet", texte: "Adam Sorbour reçoit des visiteurs venus le rencontrer." },
     { image: "images/offrandes-divinites.webp", titre: "Offrandes aux divinités", texte: "Kola, huile de palme et boissons déposées devant l'autel pour consulter les divinités." },
     { image: "images/preparation-ceremonie.webp", titre: "Préparation d'une cérémonie", texte: "Poudres, graines, chasse-mouches et fagots disposés avant le rituel." },
   ],
@@ -55,11 +55,11 @@ window.SITE = {
 
   // 4. Mentions légales
   legal: {
-    editeur: "Adam Souabirou — Cabinet spirituel « Lumière Accomplie »",
+    editeur: "Adam Sorbour — Cabinet spirituel « Lumière Accomplie »",
     statut: "", // à compléter (laisser vide pour masquer la ligne)
     rccm: "", // à compléter (laisser vide pour masquer la ligne)
     adresse: "Siège social : Bouaké, Côte d'Ivoire — Annexe : Bénin",
-    directeur: "Adam Souabirou",
+    directeur: "Adam Sorbour",
     conservation: "3 ans",
   },
   hebergeur: "Vercel Inc. — 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis — vercel.com",
@@ -69,17 +69,17 @@ window.SITE = {
   //    Exemple : { texte: "…", auteur: "A. D.", ville: "Paris" }
   temoignages: [
     {
-      texte: "J'ai connu Adam Souabirou grâce à des témoignages sur Facebook. Un vrai marabout n'a pas besoin de faire de la publicité : ce sont les témoignages qui le prouvent. Il intervient dans plusieurs domaines : retour d'affection, attirance de clientèle, savons et parfums de chance… Je suis fière, car ce maître est venu effacer mes larmes. Je suis remplie de joie au moment où j'écris ce témoignage.",
+      texte: "J'ai connu Adam Sorbour grâce à des témoignages sur Facebook. Un vrai marabout n'a pas besoin de faire de la publicité : ce sont les témoignages qui le prouvent. Il intervient dans plusieurs domaines : retour d'affection, attirance de clientèle, savons et parfums de chance… Je suis fière, car ce maître est venu effacer mes larmes. Je suis remplie de joie au moment où j'écris ce témoignage.",
       auteur: "Une cliente",
       ville: "",
     },
     {
-      texte: "J'étais dans une situation très difficile : me nourrir et couvrir mes besoins n'était pas facile. J'avais consulté plusieurs marabouts, sans résultat. Un jour, en faisant des recherches sur Internet, j'ai découvert Adam Souabirou. Je lui ai expliqué mon cas ; il m'a fait une consultation puis des rituels. À ce moment-là, mes candidatures d'emploi étaient toujours rejetées. Quelques jours après les rituels, une des entreprises qui avait refusé mon dossier m'a rappelé pour me dire de venir prendre service. Aujourd'hui, j'ai mon emploi, tout a commencé à marcher pour moi et je ne manque de rien.",
+      texte: "J'étais dans une situation très difficile : me nourrir et couvrir mes besoins n'était pas facile. J'avais consulté plusieurs marabouts, sans résultat. Un jour, en faisant des recherches sur Internet, j'ai découvert Adam Sorbour. Je lui ai expliqué mon cas ; il m'a fait une consultation puis des rituels. À ce moment-là, mes candidatures d'emploi étaient toujours rejetées. Quelques jours après les rituels, une des entreprises qui avait refusé mon dossier m'a rappelé pour me dire de venir prendre service. Aujourd'hui, j'ai mon emploi, tout a commencé à marcher pour moi et je ne manque de rien.",
       auteur: "Un client",
       ville: "",
     },
     {
-      texte: "Je partage mon expérience pour aider ceux qui souffrent. Après plusieurs échecs en amour et au travail, j'ai contacté Adam Souabirou. En quelques jours, ma situation a changé : retour de mon partenaire et déblocage financier. Un travail discret et rapide. Merci du fond du cœur.",
+      texte: "Je partage mon expérience pour aider ceux qui souffrent. Après plusieurs échecs en amour et au travail, j'ai contacté Adam Sorbour. En quelques jours, ma situation a changé : retour de mon partenaire et déblocage financier. Un travail discret et rapide. Merci du fond du cœur.",
       auteur: "Témoignage client",
       ville: "",
     },
