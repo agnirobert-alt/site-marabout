@@ -1,0 +1,4 @@
+.env*
+.git
+.vercel
+vercel.json.bak

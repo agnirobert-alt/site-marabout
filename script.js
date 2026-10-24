@@ -139,46 +139,103 @@ if ("IntersectionObserver" in window) {
 }
 
 // ----- Formulaire : demande envoyée par e-mail (FormSubmit) + ouverture de WhatsApp -----
+// Protections : validation stricte, piège anti-robots, délai minimal, anti-doublon.
 const form = document.getElementById("contactForm");
 const msg = document.getElementById("formMsg");
+const pageLoadedAt = Date.now();
+const COOLDOWN_MS = 60_000; // une demande par minute maximum
+let sending = false;
+let lastSentAt = 0;
+let lastSignature = "";
+
+const clean = (v, max) => String(v || "").replace(/[\u0000-\u001F\u007F]/g, " ").replace(/\s+/g, " ").trim().slice(0, max);
+const cleanMultiline = (v, max) => String(v || "").replace(/[\u0000-\u0009\u000B-\u001F\u007F]/g, "").trim().slice(0, max);
+const PHONE_RE = /^\+?[0-9][0-9 ().-]{6,22}$/;
+const allowed = (select) => [...select.options].map((o) => o.value || o.textContent);
+
+const showMsg = (text, isError) => {
+  msg.textContent = text;
+  msg.classList.toggle("is-error", !!isError);
+};
 
 form?.addEventListener("submit", (e) => {
   e.preventDefault();
-  let valid = true;
-  form.querySelectorAll("[required]").forEach((field) => {
-    const ok = field.type === "checkbox" ? field.checked : field.value.trim() !== "";
-    field.classList.toggle("is-invalid", !ok);
-    if (!ok) valid = false;
-  });
+  if (sending) return;
 
-  if (!valid) {
-    msg.textContent = "Merci de compléter les champs requis.";
-    msg.classList.add("is-error");
+  const d = new FormData(form);
+  const data = {
+    prenom: clean(d.get("prenom"), 60),
+    tel: clean(d.get("tel"), 25),
+    service: clean(d.get("service"), 80),
+    mode: clean(d.get("mode"), 40),
+    message: cleanMultiline(d.get("message"), 2000),
+  };
+
+  // Piège anti-robots rempli, ou formulaire soumis trop vite : on ignore sans le dire au robot
+  if (d.get("_honey") || Date.now() - pageLoadedAt < 3000) {
+    showMsg("Merci ! Votre demande a bien été prise en compte.");
+    form.reset();
     return;
   }
 
-  const d = new FormData(form);
-  const text =
-    `Bonjour ${SITE.nom}, je m'appelle ${d.get("prenom")}.\n` +
-    `Accompagnement souhaité : ${d.get("service")}\n` +
-    `Mode : ${d.get("mode")}\n` +
-    `Téléphone : ${d.get("tel")}\n\n` +
-    `${d.get("message")}`;
+  // Validation champ par champ
+  const errors = [];
+  const mark = (name, ok) => form.elements[name]?.classList.toggle("is-invalid", !ok);
+  const check = (name, ok, label) => { mark(name, ok); if (!ok) errors.push(label); };
+  check("prenom", data.prenom.length >= 2, "votre prénom");
+  check("tel", PHONE_RE.test(data.tel), "un numéro de téléphone valide");
+  check("message", data.message.length >= 10, "votre situation (au moins 10 caractères)");
+  check("service", allowed(form.elements.service).includes(data.service), "le type d'accompagnement");
+  check("mode", allowed(form.elements.mode).includes(data.mode), "le mode de consultation");
+  const consent = form.elements.consent.checked;
+  mark("consent", consent);
+  if (!consent) errors.push("votre accord pour être recontacté(e)");
 
-  // 1. Envoi automatique par e-mail au cabinet (sans action du client)
+  if (errors.length) {
+    showMsg(`Merci d'indiquer ${errors.join(", ")}.`, true);
+    return;
+  }
+
+  // Anti-doublon : même demande ou envoi trop rapproché
+  const signature = [data.prenom, data.tel, data.message].join("|").toLowerCase();
+  if (signature === lastSignature || Date.now() - lastSentAt < COOLDOWN_MS) {
+    showMsg("Votre demande a déjà été envoyée. Le cabinet vous répondra très vite.", true);
+    return;
+  }
+
+  const text =
+    `Bonjour ${SITE.nom}, je m'appelle ${data.prenom}.
+` +
+    `Accompagnement souhaité : ${data.service}
+` +
+    `Mode : ${data.mode}
+` +
+    `Téléphone : ${data.tel}
+
+` +
+    `${data.message}`;
+
+  sending = true;
+  lastSentAt = Date.now();
+  lastSignature = signature;
+  const button = form.querySelector('button[type="submit"]');
+  button.disabled = true;
+
+  // 1. Envoi automatique par e-mail au cabinet
   const emailSent = SITE.email
     ? fetch(`https://formsubmit.co/ajax/${SITE.email}`, {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
-          _subject: `Nouvelle demande — ${d.get("prenom")} (${d.get("service")})`,
+          _subject: `Nouvelle demande — ${data.prenom} (${data.service})`,
           _template: "table",
           _captcha: "false",
-          Prénom: d.get("prenom"),
-          Téléphone: d.get("tel"),
-          Accompagnement: d.get("service"),
-          Mode: d.get("mode"),
-          Message: d.get("message"),
+          _honey: "",
+          Prénom: data.prenom,
+          Téléphone: data.tel,
+          Accompagnement: data.service,
+          Mode: data.mode,
+          Message: data.message,
         }),
         keepalive: true,
       }).then((r) => r.ok).catch(() => false)
@@ -186,14 +243,16 @@ form?.addEventListener("submit", (e) => {
 
   // 2. WhatsApp s'ouvre tout de suite (avant tout délai, pour ne pas être bloqué par le navigateur)
   window.open(waLink(text), "_blank", "noopener");
-  msg.classList.remove("is-error");
-  msg.textContent = "Envoi de votre demande…";
+  showMsg("Envoi de votre demande…");
   emailSent.then((ok) => {
-    msg.textContent = ok
+    showMsg(ok
       ? "Merci ! Votre demande a bien été envoyée au cabinet. Vous pouvez aussi l'envoyer sur WhatsApp."
-      : "Merci ! Envoyez votre message dans WhatsApp pour finaliser votre demande.";
+      : "Merci ! Envoyez votre message dans WhatsApp pour finaliser votre demande.");
+    if (ok) form.reset();
+    else lastSignature = ""; // échec de l'e-mail : le client pourra réessayer
+    sending = false;
+    setTimeout(() => (button.disabled = false), COOLDOWN_MS);
   });
-  form.reset();
 });
 
 // ----- Onglets des services -----

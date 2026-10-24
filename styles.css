@@ -553,3 +553,7 @@ h1 em, h2 em { text-shadow: 0 0 18px rgba(233, 196, 106, .55), 0 0 42px rgba(233
 /* Biographie dans l'accueil */
 .hero__lead--bio { max-width: 780px; font-size: 1.02rem; line-height: 1.75; }
 .hero__lead--bio strong { color: var(--gold); font-weight: 600; }
+
+/* Piège anti-robots du formulaire (hors écran) */
+.form__hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.form button[disabled] { opacity: .6; cursor: not-allowed; }

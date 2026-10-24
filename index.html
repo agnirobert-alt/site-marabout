@@ -650,10 +650,10 @@
         <form class="form" id="contactForm" novalidate>
           <div class="form__row">
             <label>Prénom
-              <input type="text" name="prenom" required autocomplete="given-name">
+              <input type="text" name="prenom" required autocomplete="given-name" minlength="2" maxlength="60">
             </label>
             <label>Téléphone
-              <input type="tel" name="tel" required autocomplete="tel">
+              <input type="tel" name="tel" required autocomplete="tel" maxlength="25" inputmode="tel">
             </label>
           </div>
           <label>Type d'accompagnement
@@ -676,8 +676,12 @@
             </select>
           </label>
           <label>Votre situation en quelques mots
-            <textarea name="message" rows="4" required></textarea>
+            <textarea name="message" rows="4" required minlength="10" maxlength="2000"></textarea>
           </label>
+          <!-- Piège anti-robots : invisible pour les visiteurs, rempli seulement par les robots -->
+          <div class="form__hp" aria-hidden="true">
+            <label>Ne pas remplir <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
+          </div>
           <label class="form__consent">
             <input type="checkbox" name="consent" required>
             <span>J'accepte d'être recontacté(e) au sujet de ma demande (<a href="confidentialite.html">politique de confidentialité</a>).</span>
