@@ -241,6 +241,9 @@ form?.addEventListener("submit", (e) => {
       }).then((r) => r.ok).catch(() => false)
     : Promise.resolve(false);
 
+  // Signale la demande (utilisé par le Pixel Meta s'il est activé)
+  document.dispatchEvent(new CustomEvent("site:lead", { detail: { service: data.service } }));
+
   // 2. WhatsApp s'ouvre tout de suite (avant tout délai, pour ne pas être bloqué par le navigateur)
   window.open(waLink(text), "_blank", "noopener");
   showMsg("Envoi de votre demande…");
