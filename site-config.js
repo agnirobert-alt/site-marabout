@@ -95,5 +95,5 @@ window.SITE = {
 
   // 7. Pixel Meta (Facebook) — identifiant à 15-16 chiffres, à copier depuis le Gestionnaire d'événements.
   //    Vide = aucun suivi. Le Pixel ne se charge qu'après l'accord du visiteur (bandeau cookies).
-  metaPixelId: "1995830254335838",
+  metaPixelId: "1649151873330856",
 };
